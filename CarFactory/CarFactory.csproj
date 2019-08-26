@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968EB54A-A5DC-4BEF-8DA5-F9F8DCDCBB83}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CarFactory</RootNamespace>
+    <AssemblyName>CarFactory</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\audi-logo.jpg" />
+    <Content Include="Images\bmw.jpg" />
+    <Content Include="Images\hyndai.jpg" />
+    <Content Include="Images\car.jpg" />
+    <Content Include="Manufacturers\Manufacturers.aspx" />
+    <Content Include="Manufacturers\Audi\Audi.aspx" />
+    <Content Include="Manufacturers\BMW\BMW.aspx" />
+    <Content Include="Manufacturers\Hyundai\Hyundai.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Manufacturers.aspx.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Manufacturers.aspx.designer.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Audi\Audi.aspx.cs">
+      <DependentUpon>Audi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Audi\Audi.aspx.designer.cs">
+      <DependentUpon>Audi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\BMW\BMW.aspx.cs">
+      <DependentUpon>BMW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\BMW\BMW.aspx.designer.cs">
+      <DependentUpon>BMW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Hyundai\Hyundai.aspx.cs">
+      <DependentUpon>Hyundai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturers\Hyundai\Hyundai.aspx.designer.cs">
+      <DependentUpon>Hyundai.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manufacturers\" />
+    <Folder Include="Manufacturers\Audi\" />
+    <Folder Include="Manufacturers\BMW\" />
+    <Folder Include="Manufacturers\Hyundai\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
